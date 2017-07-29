@@ -32,5 +32,5 @@ def talk(stuff):
    elif 'angry' in stuff: return '（▼へ▼メ）'
    elif 'flip' in stuff: return '(╯°□°）╯︵ ┻━┻'
    elif 'sorry' in stuff: return '๑•́ㅿ•̀๑) ᔆᵒʳʳᵞ'
-   elif 'top song' in stuff: return 'h!play http://www.youtube.com/playlist?list=PLw-VjHDlEOgstyQx-bOfTg-S-aDV_D_Ot'
+   elif 'top song' in stuff: return 'http://www.youtube.com/playlist?list=PLw-VjHDlEOgstyQx-bOfTg-S-aDV_D_Ot'
    else:return riddle()
