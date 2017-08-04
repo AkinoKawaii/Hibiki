@@ -118,7 +118,7 @@ __________________________________________
         except Exception as e: print (str(e))
     
     
-    elif message.content.startswith('@Hibiki#9712'):  
+    elif message.content.mentions('@Hibiki#9712'):  
         if message.content == '@Hibiki#9712':return
         else:
             text = re.findall('@Hibiki#9712\s(.*)',message.content)
