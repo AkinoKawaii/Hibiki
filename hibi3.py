@@ -12,7 +12,8 @@ def colors():
 def escape_mass_mentions(text):
     words = {
         "@everyone": "@\u200beveryone",
-        "@here": "@\u200bhere"
+        "@here": "@\u200bhere",
+        "@Hibiki": "@\Hibiki#9712"
     }
     for k, v in words.items():
         text = text.replace(k, v)
