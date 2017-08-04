@@ -13,7 +13,7 @@ def escape_mass_mentions(text):
     words = {
         "@everyone": "@\u200beveryone",
         "@here": "@\u200bhere",
-        "@Hibiki": "@\u200bHibiki#9712"
+        "@Hibiki": "@Hibiki#9712"
     }
     for k, v in words.items():
         text = text.replace(k, v)
