@@ -119,7 +119,7 @@ __________________________________________
     
         
     elif message.content.startswith('<@333081212065284096>'):  
-        if message.content == '<@333081212065284096>':return
+        if message.content == '<@333081212065284096>:return
         else:
             text = re.findall('<@333081212065284096>\s(.*)',message.content)
             refined = ' '.join(text)
