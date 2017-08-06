@@ -72,7 +72,7 @@ __________________________________________
                     user_em = discord.Embed(
                     description=data)
                     user_em.set_author(
-                    name="Your Info 😄 :")
+                    name="Your Stats :")
                     user_em.set_image(url = discord.Member.avatar_url)
                     user_em.color=coloursman
                 
@@ -119,7 +119,7 @@ __________________________________________
     
         
     elif message.content.startswith('<@333081212065284096>'):  
-        if message.content == '<@333081212065284096>:return
+        if message.content == '<@333081212065284096>':return
         else:
             text = re.findall('<@333081212065284096>\s(.*)',message.content)
             refined = ' '.join(text)
