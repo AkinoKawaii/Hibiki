@@ -3,6 +3,7 @@ import asyncio
 import re
 import random
 import talking
+import welcome
 client = discord.Client()
 def colors():
     list_colors = [{'color':"16777215"},{'color':"16711680"},{'color':"0"},{'color':"255"},{'color':"8388736"},{'color':"65535"},{'color':"8421504"},{'color':"8421504"},{'color':"10040319"}]
@@ -35,9 +36,9 @@ async def on_message(message):
 ..........................................
 |Commands       |    Usage               |
 +=-=-=-=-=-=--=-+-=-=-=-=-=-=-=-=-=-=-=-=+
-|.muser         | info about msgauthor.  |
-|.muser <tag>   | info about tagged user.|
-|.msay <text>   | repeats your words.    |
+|h!user         | info about msgauthor.  |
+|h!user <tag>   | info about tagged user.|
+|h!say <text>   | repeats your words.    |
 ''''''''''''''''''''''''''''''''''''''''''
  Masamune <text> to talk ;D        
  More to come soon ;D```""")
