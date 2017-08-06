@@ -4,7 +4,7 @@ import discord
 log = logging.getLogger('discord')
 
 
-class Welcome(Plugin):
+class Welcome:
 
     fancy_name = "Welcome"
 
@@ -60,4 +60,4 @@ class Welcome(Plugin):
         if channel is not None:
             destination = channel
 
-        await self.mee6.send_message(destination, gb_message)
+        await self.send_message(destination, gb_message)
