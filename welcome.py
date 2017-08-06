@@ -1,59 +1,14 @@
 import discord
 
-class Welcome:
+@client.event
+async def on_member_join(member):
+    server = member.server
+    fmt = 'Welcome {0.mention} to {1.name}!'
+    await client.send_message(server, fmt.format(member, server))
 
-    fancy_name = "Welcome"
-
-    async def on_member_join(self, member):
-        server = member.server
-        storage = await self.get_storage(server)
-        welcome_message = await storage.get('welcome_message')
-        welcome_message = welcome_message.replace(
-            "{server}",
-            server.name
-        ).replace(
-            "{user}",
-            member.mention
-        )
-        channel_name = await storage.get('channel_name')
-
-        private = await storage.get('private')
-        if private:
-            destination = member
-        else:
-            destination = server
-            channel = discord.utils.find(lambda c: c.name == channel_name or
-                                         c.id == channel_name,
-                                         server.channels)
-            if channel is not None:
-                destination = channel
-
-        await self.bot.send_message(destination, welcome_message)
-
-    async def on_member_remove(self, member):
-        server = member.server
-        storage = await self.get_storage(server)
-        gb_message = await storage.get('gb_message')
-        gb_enabled = (await storage.get('gb_disabled')) is None
-        if not gb_enabled:
-            return
-        if not gb_message:
-            return
-
-        gb_message = gb_message.replace(
-            "{server}",
-            server.name
-        ).replace(
-            "{user}",
-            member.name
-        )
-        channel_name = await storage.get('channel_name')
-
-        destination = server
-        channel = discord.utils.find(lambda c: c.name == channel_name or
-                                     c.id == channel_name,
-                                     server.channels)
-        if channel is not None:
-            destination = channel
-
-        await self.bot.send_message(destination, gb_message)
+@client.event
+async def on_ready():
+    print('Logged in as')
+    print(client.user.name)
+    print(client.user.id)
+    print('------')
