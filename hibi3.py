@@ -118,7 +118,7 @@ __________________________________________
         except Exception as e: print (str(e))
     
     
-    elif message.content.startswith('<0.333081212065284096>'):  
+    elif message.content.startswith('<@.333081212065284096>'):  
         if message.content == 'Hibiki':return
         else:
             text = re.findall('Hibiki\s(.*)',message.content)
