@@ -117,8 +117,8 @@ __________________________________________
   
         except Exception as e: print (str(e))
     
-        if client.mentions('@Hibiki#9712')
-    elif message.content.startswith('<@Hibiki#9712>'):  
+        
+    elif message.content.startswith !='333081212065284096':  
         if message.content == 'Hibiki':return
         else:
             text = re.findall('Hibiki\s(.*)',message.content)
