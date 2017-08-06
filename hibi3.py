@@ -44,8 +44,8 @@ async def on_message(message):
 |h!user <tag>   | info about tagged user.|
 |h!say <text>   | repeats your words.    |
 ''''''''''''''''''''''''''''''''''''''''''
- Masamune <text> to talk ;D        
- More to come soon ;D```""")
+ Hibiki <text> to talk ;D        
+ Hibiki v.1.1.1```""")
     elif message.content.startswith('h!user'):
         try:
             if message.channel.id !='274387797140570112':
