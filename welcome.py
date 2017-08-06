@@ -1,8 +1,4 @@
-import logging
 import discord
-
-log = logging.getLogger('discord')
-
 
 class Welcome:
 
@@ -32,7 +28,7 @@ class Welcome:
             if channel is not None:
                 destination = channel
 
-        await self.mee6.send_message(destination, welcome_message)
+        await self.bot.send_message(destination, welcome_message)
 
     async def on_member_remove(self, member):
         server = member.server
@@ -60,4 +56,4 @@ class Welcome:
         if channel is not None:
             destination = channel
 
-        await self.send_message(destination, gb_message)
+        await self.bot.send_message(destination, gb_message)
