@@ -12,8 +12,7 @@ def colors():
 def escape_mass_mentions(text):
     words = {
         "@everyone": "@\u200beveryone",
-        "@here": "@\u200bhere",
-        "@Hibiki": "@Hibiki#9712"
+        "@here": "@\u200bhere"
     }
     for k, v in words.items():
         text = text.replace(k, v)
@@ -118,10 +117,10 @@ __________________________________________
         except Exception as e: print (str(e))
     
     
-    elif message.content.mentions('@Hibiki#9712'):  
-        if message.content == '@Hibiki#9712':return
+    elif message.content.startswith ('Hibiki'):  
+        if message.content == 'Hibiki':return
         else:
-            text = re.findall('@Hibiki#9712\s(.*)',message.content)
+            text = re.findall('Hibiki\s(.*)',message.content)
             refined = ' '.join(text)
             near_done = refined
             lower_them = near_done.lower()
