@@ -1,5 +1,7 @@
 import discord
 
+client = discord.Client()
+
 @client.event
 async def on_member_join(member):
     server = member.server
@@ -12,3 +14,5 @@ async def on_ready():
     print(client.user.name)
     print(client.user.id)
     print('------')
+
+client.run('MzMzMDgxMjEyMDY1Mjg0MDk2.DFXOqg.VpNyeY4rvjN4Ugg6OFWJdqBkMGU')
