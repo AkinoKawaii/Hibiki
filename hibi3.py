@@ -30,7 +30,7 @@ async def on_message(message):
     random_color = colors()
  #   if message.content.startswith('=ok'):
      #   await client.send_message(message.channel,'ok')
-    if message.content.startswith('.mhelp'):
+    if message.content.startswith('h!help'):
         await client.send_message(message.channel,"""```
 ..........................................
 |Commands       |    Usage               |
@@ -41,7 +41,7 @@ async def on_message(message):
 ''''''''''''''''''''''''''''''''''''''''''
  Masamune <text> to talk ;D        
  More to come soon ;D```""")
-    elif message.content.startswith('.muser'):
+    elif message.content.startswith('h!user'):
         try:
             if message.channel.id !='274387797140570112':
                 coloursman = int(random_color['color'])
@@ -80,7 +80,7 @@ async def on_message(message):
            
            
                 else:
-                    check_tagger = re.findall('.muser\s(.*)',message.content)
+                    check_tagger = re.findall('h!user\s(.*)',message.content)
         
                     hilol_ = ' '.join(check_tagger)
                     no1is = re.sub(r'[^\w]', ' ', hilol_)
@@ -130,9 +130,9 @@ async def on_message(message):
             await client.send_message(message.channel,new)
                   
     elif message.content.startswith('h!say'):
-        if message.content == '.msay':return
+        if message.content == 'h!say':return
         else:
-            text = re.findall('.msay\s(.*)',message.content)
+            text = re.findall('h!say\s(.*)',message.content)
             refined = ' '.join(text)
             await client.send_message(message.channel, '{0}'.format(refined))
                             
