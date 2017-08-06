@@ -117,7 +117,7 @@ __________________________________________
   
         except Exception as e: print (str(e))
     
-    
+        if client.mentions('@Hibiki#9712')
     elif message.content.startswith('<@Hibiki#9712>'):  
         if message.content == 'Hibiki':return
         else:
