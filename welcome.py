@@ -15,4 +15,4 @@ async def on_ready():
     print(client.user.id)
     print('------')
 
-client.run('MzMzMDgxMjEyMDY1Mjg0MDk2.DGhuqA.5cL7Y4oQOxUfaCEadUoBT4EMYrw')
+client.run('MzMzMDgxMjEyMDY1Mjg0MDk2.DGhwTw.aIN4T-N2VS0yZfc6yO9NqKWIPlA')
