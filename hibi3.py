@@ -118,10 +118,10 @@ __________________________________________
         except Exception as e: print (str(e))
     
     
-    elif message.content.startswith ('0.Hibiki'):  
-        if message.content == '0.Hibiki':return
+    elif message.content.startswith ('{0.Hibiki}'):  
+        if message.content == '{0.Hibiki}':return
         else:
-            text = re.findall('0.Hibiki\s(.*)',message.content)
+            text = re.findall('{0.Hibiki}\s(.*)',message.content)
             refined = ' '.join(text)
             near_done = refined
             lower_them = near_done.lower()
