@@ -118,10 +118,10 @@ __________________________________________
         except Exception as e: print (str(e))
     
         
-    elif message.content.startswith('<@333081212065284096>'):  
-        if message.content == '<@333081212065284096>':return
+    elif message.content.startswith('Hibiki'):  
+        if message.content == 'Hibiki':return
         else:
-            text = re.findall('<@333081212065284096>\s(.*)',message.content)
+            text = re.findall('Hibiki\s(.*)',message.content)
             refined = ' '.join(text)
             near_done = refined
             lower_them = near_done.lower()
