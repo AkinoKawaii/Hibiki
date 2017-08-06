@@ -3,6 +3,7 @@ import asyncio
 import re
 import random
 import talking
+import welcome
 
 client = discord.Client()
 def colors():
