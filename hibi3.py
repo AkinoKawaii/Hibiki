@@ -50,7 +50,7 @@ async def on_message(message):
         try:
             if message.channel.id !='274387797140570112':
                 coloursman = int(random_color['color'])
-                if message.content == '.muser':
+                if message.content == 'h!user':
                     discord.Member = None
                     author = message.author
                     if not discord.Member :
