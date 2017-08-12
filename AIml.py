@@ -9,8 +9,10 @@ async def on_message(message):
     if message.content.startswith('hello'):
         msg = 'Hello {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
-
-    elif message.content.startswith('how are you'):
+	
+@client.event
+async def on_message(message):
+    if message.content.startswith('how are you'):
         await client.send_message(message.channel,"""Im fine""")
 		
 @client.event
