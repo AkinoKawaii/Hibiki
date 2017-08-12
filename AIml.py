@@ -4,6 +4,7 @@ client = discord.Client()
 
 @client.event
 async def on_message(message)
+    random_color = colors ()
 if message.content.startswith('hi'):
         await client.send_message(message.channel,"Hello")
 
