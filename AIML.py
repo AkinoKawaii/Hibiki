@@ -48,7 +48,7 @@ async def on_message(message):
 	    msg = 'my name is Hibiki Desu!'.format(message)
 		await client.send_message(message.channel, msg)
 	
-	elif message.content.startswith(where do you live')
+	elif message.content.startswith('where do you live')
 	    msg = 'Im AI so I live in Internet'.format(message)
 		await client.send_message(message.channel, msg)
 		
