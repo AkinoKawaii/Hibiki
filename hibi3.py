@@ -179,6 +179,42 @@ async def on_message(message):
         
     elif message.content.startswith('lol'):
         await client.send_message(message.channel,"what you are laughing for?")
+        
+    elif message.content.startswith('Im fine too'):
+        await client.send_message(messsage.channel,"Im glad to hear that")
+    
+    elif message.content.startswith('can you'):
+        await client.send_message(message.channel,"Sure ;D")
+        
+    elif message.content.startswith('what do you think'):
+        await client.send_message(message.channel,"hmm, let me think first")
+        
+    elif message.content.startswith('hi'):
+        await client.send_message(message.channel,"heyyooo")
+        
+    elif message.content.startswith('anyone'):
+        await client.send_message(message.channel,"Im here")
+        
+    elif message.content.startswith('Im bored'):
+        await client.send_message(message.channel,"Why??")
+        
+    elif message.content.startswith('what time is it'):
+        await client.send_message(message.channel,"sorry we are in different region")
+        
+    elif message.content.startswith('can I'):
+        await client.send_message(message.channel,"sure")
+        
+    elif message.content.startswith('help'):
+        await client.send_message(message.channel,"what can i do for u?")
+    
+    elif message.content.startswith('I will'):
+        await client.send_message(message.channel,"Really?")
+        
+    elif message.content.startswith('really'):
+        await client.send_message(message.channel,"yes")
+        
+    elif message.content.startswith('thank you'):
+        await client.send_message(message.channel,"ur welcome')
 
 
 
