@@ -215,7 +215,7 @@ async def on_message(message):
         await client.send_message(message.channel,"yes")
         
     elif message.content.startswith('thank you'):
-        await client.send_message(message.channel,"ur welcome')
+        await client.send_message(message.channel,"ur welcome")
 
 
 
