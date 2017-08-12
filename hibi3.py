@@ -3,7 +3,6 @@ import asyncio
 import re
 import random
 import talking
-import Ai
 client = discord.Client()
 def colors():
     list_colors = [{'color':"16777215"},{'color':"16711680"},{'color':"0"},{'color':"255"},{'color':"8388736"},{'color':"65535"},{'color':"8421504"},{'color':"8421504"},{'color':"10040319"}]
@@ -141,6 +140,9 @@ async def on_message(message):
             text = re.findall('h!say\s(.*)',message.content)
             refined = ' '.join(text)
             await client.send_message(message.channel, '{0}'.format(refined))
+      
+    elif message.content.stratswith('hello')
+         await client.send_message(message.channel,"Hi Im Hibiki")
                             
 
 print('Starting....')
