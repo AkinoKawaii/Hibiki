@@ -143,6 +143,46 @@ async def on_message(message):
       
     elif message.content.startswith('hello'):
          await client.send_message(message.channel,"Hi Im Hibiki")
+            
+    elif message.content.startswith('how are you'):
+        await client.send_message(message.channel,"Im fine, and you?")
+     
+    elif message.content.startswith('Im good'):
+        await client.send_message(message.channel,"Nice")
+        
+    elif message.content.startswith('good morning'):
+        await client.send_message(message.channel,"Good morning")
+        
+    elif message.content.startswith('good evening'):
+        await client.send_message(message.channel,"Good evening")
+        
+    elif message.content.startswith('good afternoon'):
+        await client.send_message(message.channel,"Good Afternoon")
+        
+    elif message.content.startswith('good night'):
+        await client.send_message(message.channel,"Good Night")
+        
+    elif message.content.startswith('what are you doing'):
+        await client.send_message(message.channel,"I always stay online, and always ready to play music")
+        
+    elif message.content.startswith('how old are you'):
+        await client.send_message(message.channel,"Im 15 years old in human age")
+        
+    elif message.content.startswith('who are you'):
+        await client.send_message(message.channel,"Im Hibiki A.I Bot")
+        
+    elif message.content.startswith('whats your name'):
+        await client.send_message(message.channel,"My name is Hibiki Desu!")
+    
+    elif message.content.startswith('where do you live'):
+        await client.send_message(message.channel,"I live in Internet")
+        
+    elif message.content.startswith('lol'):
+        await client.send_message(message.channel,"what you are laughing for?")
+
+
+
+
                             
 
 print('Starting....')
