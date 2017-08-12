@@ -17,7 +17,7 @@ async def on_message(message):
         return
 
     if message.content.startswith('how are you'):
-	msg = 'Im excellent. and you?'.format(message)
+	msg = 'Im excellent and you?'.format(message)
 	await client.send_message(message.channel, msg)
 
 @client.event
