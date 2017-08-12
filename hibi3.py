@@ -141,7 +141,7 @@ async def on_message(message):
             refined = ' '.join(text)
             await client.send_message(message.channel, '{0}'.format(refined))
       
-    elif message.content.stratswith('hello')
+    elif message.content.startswith('hello')
          await client.send_message(message.channel,"Hi Im Hibiki")
                             
 
