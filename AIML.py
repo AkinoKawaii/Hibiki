@@ -24,7 +24,7 @@ async def on_message(message):
 	    msg = 'Good evening'.format(message)
 		await client.send_message(message.channel, msg)
 		
-    elif message.content.startswith('good afternoon'):
+        elif message.content.startswith('good afternoon'):
 	    msg = 'Good afternoon'.format(message)
 		await client.send_message(message.channel, msg)
 	
@@ -36,7 +36,7 @@ async def on_message(message):
 	    msg = 'Im always stay online, and playing music'.format(message)
 		await client.send_message(message.channel, msg)
 		
-    elif message.content.startswith('how old are you'):
+        elif message.content.startswith('how old are you'):
 	    msg = 'Im 15 years old in human age'.format(message)
 		await client.send_message(message.channel, msg)
 		
