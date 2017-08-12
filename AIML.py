@@ -33,7 +33,7 @@ async def on_message(message):
 		await client.send_message(message.channel, msg)
 	
 	elif message.content.startswith('what are you doing'):
-	    msg = 'Im always stay online, and playing music >.<'.format(message)
+	    msg = 'Im always stay online, and playing music'.format(message)
 		await client.send_message(message.channel, msg)
 		
     elif message.content.startswith('how old are you'):
