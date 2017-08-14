@@ -1,7 +1,7 @@
 import discord
 import asyncio
-import re
-add client = discord.Client()
+
+client = discord.Client()
 
 @client.event
 async def on_message(message):
