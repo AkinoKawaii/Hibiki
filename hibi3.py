@@ -20,6 +20,11 @@ def escape_mass_mentions(text):
     return text
 
 @client.event
+async def on_member_remove(member)
+    server = member.server
+    fmt = '{0.mention} leave the {1.name} server'
+    await client.send_message(server, fmt.format(member, server))
+@client.event
 async def on_member_join(member):
     server = member.server
     fmt = 'Welcome {0.mention} to {1.name}!'
