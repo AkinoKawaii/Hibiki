@@ -8,7 +8,7 @@ async def on_message(message):
  #   if message.content.startswith('=ok'):
      #   await client.send_message(message.channel,'ok')
     
-      if message.content.startswith('hello'):
+    if message.content.startswith('hello'):
          await client.send_message(message.channel,"Hi Im Hibiki")
             
     elif message.content.startswith('how are you'):
