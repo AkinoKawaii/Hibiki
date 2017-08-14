@@ -1,4 +1,6 @@
 import discord
+import asyncio
+import re
 
 @client.event
 async def on_message(message):
