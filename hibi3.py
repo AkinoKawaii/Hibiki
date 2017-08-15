@@ -36,13 +36,13 @@ async def on_member_update(before, after):
                 for role in before.roles:
                     if role not in after.roles:
                         embed = discord.Embed(description='{0.display_name} ({0.id}) lost the {1.name} role'.format(before, role))
-                        embed.set_author(name='Role removed', icon_url=server.icon_url)
+                        embed.set_author(name='Role removed', icon_url=member.avatar_url)
                         await client.send_message(after.server, embed=embed)
             elif len(before.roles) < len(after.roles):
                 for role in after.roles:
                     if role not in before.roles:
                         embed = discord.Embed(description='{0.display_name} ({0.id}) got the {1.name} role'.format(before, role))
-                        embed.set_author(name='Role applied', icon_url=server.icon_url)
+                        embed.set_author(name='Role applied', icon_url=member.avatar_url)
                         await client.send_message(after.server, embed=embed)
 
 @client.event
