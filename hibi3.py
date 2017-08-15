@@ -4,6 +4,7 @@ import re
 import random
 import talking
 import Ai
+import update
 client = discord.Client()
 def colors():
     list_colors = [{'color':"16777215"},{'color':"16711680"},{'color':"0"},{'color':"255"},{'color':"8388736"},{'color':"65535"},{'color':"8421504"},{'color':"8421504"},{'color':"10040319"}]
@@ -41,18 +42,27 @@ async def on_message(message):
     random_color = colors()
  #   if message.content.startswith('=ok'):
      #   await client.send_message(message.channel,'ok')
-    if message.content.startswith('h!help'):
+    if message.content.startswith('h!commands'):
+         try:
+            if message.channel.id !='274387797140570112':
+                coloursman = int(random_color['color'])
         await client.send_message(message.channel,"""```
-..........................................
-|Commands       |    Usage               |
-+=-=-=-=-=-=--=-+-=-=-=-=-=-=-=-=-=-=-=-=+
-|h!user         | info about msgauthor.  |
-|h!user <tag>   | info about tagged user.|
-|h!say <text>   | repeats your words.    |
-''''''''''''''''''''''''''''''''''''''''''
- Now you can talk with me ;D        
- Hibiki v.1.1.2
- A.I features```""")
+INFO
+h!user              show the status user
+h!user <tag>        show the status tagged user
+
+SAY
+h!say <words>       reply your chat
+
+MUSIC
+h!summon            summon me into the VC
+h!play <song/url>   play song
+h!queue             show the queue songs
+h!pause             pause the song
+h!resume            resume the song
+h!skip              skip the song
+h!shuffle           shuffle the song
+h!disconnect        disconnect from the VC```""")
     elif message.content.startswith('h!user'):
         try:
             if message.channel.id !='274387797140570112':
