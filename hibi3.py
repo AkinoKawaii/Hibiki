@@ -42,10 +42,7 @@ async def on_message(message):
     random_color = colors()
  #   if message.content.startswith('=ok'):
      #   await client.send_message(message.channel,'ok')
-    if message.content.startswith('h!commands'):
-         try:
-            if message.channel.id !='274387797140570112':
-                coloursman = int(random_color['color'])
+    if message.content.startswith('h!orders'):
         await client.send_message(message.channel,"""```
 INFO
 h!user              show the status user
@@ -62,7 +59,8 @@ h!pause             pause the song
 h!resume            resume the song
 h!skip              skip the song
 h!shuffle           shuffle the song
-h!disconnect        disconnect from the VC```""")
+h!disconnect        disconnect from the VC
+```""")
     elif message.content.startswith('h!user'):
         try:
             if message.channel.id !='274387797140570112':
