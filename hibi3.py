@@ -147,16 +147,16 @@ h!disconnect        disconnect from the VC
             
 
 @client.event
-async def on_member_update(before, after):
+async def on_member_update(before, after, member):
         server = after.server
         member = after
         if before.name != after.name:
             embed = discord.Embed(description='From {0.name} ({0.id}) to {1.name}'.format(before, after))
-            embed.set_author(icon_url=member.avatar_url, name='{0.mention}'.format(before, after))
+            embed.set_author(icon_url=member.avatar_url, name='{0.mention}'.format(member, server))
             await client.send_message(after.server, embed=embed)
         if before.nick != after.nick:
             embed = discord.Embed(description='From {0.nick} ({0.id}) to {1.nick}'.format(before, after))
-            embed.set_author(icon_url=member.avatar_url, name='{0.mention}'.format(before, after))
+            embed.set_author(icon_url=member.avatar_url, name='{0.mention}'.format(member, server))
             await client.send_message(after.server, embed=embed)
         if before.roles != after.roles:
             if len(before.roles) > len(after.roles):
