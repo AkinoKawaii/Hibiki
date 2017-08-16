@@ -24,13 +24,32 @@ async def on_ready():
     print(client.user.name)
     print(client.user.id)
     print('------')
-    await client.change_presence( game=discord.Game( name= 'h!orders'))
+    await client.change_presence( game=discord.Game( name= 'h!orders | >orders'))
 @client.event
 async def on_message(message):
     random_color = colors()
  #   if message.content.startswith('=ok'):
      #   await client.send_message(message.channel,'ok')
     if message.content.startswith('h!orders'):
+        await client.send_message(message.channel,"""```
+INFO
+h!user              show the status user
+h!user <tag>        show the status tagged user
+
+SAY
+h!say <words>       reply your chat
+
+MUSIC
+h!summon            summon me into the VC
+h!play <song/url>   play song
+h!queue             show the queue songs
+h!pause             pause the song
+h!resume            resume the song
+h!skip              skip the song
+h!shuffle           shuffle the song
+h!disconnect        disconnect from the VC
+```""")
+        elif message.content.startswith('>orders'):
         await client.send_message(message.channel,"""```
 INFO
 h!user              show the status user
