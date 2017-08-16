@@ -24,7 +24,7 @@ async def on_ready():
     print(client.user.name)
     print(client.user.id)
     print('------')
-    await client.change_presence( game=discord.Game( name= 'h!orders | >orders'))
+    await client.change_presence( game=discord.Game( name= 'h!orders | ~orders'))
 @client.event
 async def on_message(message):
     random_color = colors()
@@ -49,7 +49,7 @@ h!skip              skip the song
 h!shuffle           shuffle the song
 h!disconnect        disconnect from the VC
 ```""")
-        elif message.content.startswith('>orders'):
+        elif message.content.startswith('~orders'):
         await client.send_message(message.channel,"""```
 INFO
 h!user              show the status user
