@@ -3,7 +3,7 @@ import asyncio
 import re
 import random
 import talking
-import AI
+import Aia
 client = discord.Client()
 def colors():
     list_colors = [{'color':"16777215"},{'color':"16711680"},{'color':"0"},{'color':"255"},{'color':"8388736"},{'color':"65535"},{'color':"8421504"},{'color':"8421504"},{'color':"10040319"}]
@@ -152,7 +152,7 @@ async def on_member_update(before, after):
         member = after
         if before.name != after.name:
             embed = discord.Embed(description='From {0.name} ({0.id}) to {1.name}'.format(before, after))
-            embed.set_author(name='{0.mention} Name changed'.format(member, server), icon_url=member.avatar_url)
+            embed.set_author(name="{0.mention}".format(member, server), icon_url=member.avatar_url)
             await client.send_message(after.server, embed=embed)
         if before.nick != after.nick:
             embed = discord.Embed(description='From {0.nick} ({0.id}) to {1.nick}'.format(before, after))
