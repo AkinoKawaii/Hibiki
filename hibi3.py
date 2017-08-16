@@ -2,7 +2,7 @@ import discord
 import asyncio
 import re
 import random
-import Aia
+import talky
 import talking
 client = discord.Client()
 def colors():
