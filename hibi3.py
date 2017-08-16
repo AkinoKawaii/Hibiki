@@ -3,7 +3,7 @@ import asyncio
 import re
 import random
 import talking
-import Ai
+import AI
 client = discord.Client()
 def colors():
     list_colors = [{'color':"16777215"},{'color':"16711680"},{'color':"0"},{'color':"255"},{'color':"8388736"},{'color':"65535"},{'color':"8421504"},{'color':"8421504"},{'color':"10040319"}]
@@ -25,24 +25,24 @@ async def on_member_update(before, after):
         member = after
         if before.name != after.name:
             embed = discord.Embed(description='From {0.name} ({0.id}) to {1.name}'.format(before, after))
-            embed.set_author(name='Name changed', icon_url=member.avatar_url)
+            embed.set_author(name='{0.mention} Name changed', icon_url=member.avatar_url)
             await client.send_message(after.server, embed=embed)
         if before.nick != after.nick:
             embed = discord.Embed(description='From {0.nick} ({0.id}) to {1.nick}'.format(before, after))
-            embed.set_author(name='Nickname changed', icon_url=member.avatar_url)
+            embed.set_author(name='{0.mention} Nickname changed', icon_url=member.avatar_url)
             await client.send_message(after.server, embed=embed)
         if before.roles != after.roles:
             if len(before.roles) > len(after.roles):
                 for role in before.roles:
                     if role not in after.roles:
                         embed = discord.Embed(description='{0.display_name} ({0.id}) lost the {1.name} role'.format(before, role))
-                        embed.set_author(name='Role removed', icon_url=member.avatar_url)
+                        embed.set_author(name='{0.mention} Role removed', icon_url=member.avatar_url)
                         await client.send_message(after.server, embed=embed)
             elif len(before.roles) < len(after.roles):
                 for role in after.roles:
                     if role not in before.roles:
                         embed = discord.Embed(description='{0.display_name} ({0.id}) got the {1.name} role'.format(before, role))
-                        embed.set_author(name='Role applied', icon_url=member.avatar_url)
+                        embed.set_author(name='{0.mention} Role applied', icon_url=member.avatar_url)
                         await client.send_message(after.server, embed=embed)
 
 @client.event
