@@ -50,8 +50,8 @@ h!shuffle           shuffle the song
 h!disconnect        disconnect from the VC
 ```""")
      
-   elif message.content.startswith('h!orders'):
-         await client.send_message(message.channel, """<https://cdn.discordapp.com/attachments/333240041302261761/349152395449860097/Hibi_Support.jpg>""")
+   elif message.content.startswith('h!order'):
+         await client.send_message(message.channel, "<https://cdn.discordapp.com/attachments/333240041302261761/349152395449860097/Hibi_Support.jpg>")
       
         
     elif message.content.startswith('h!user'):
