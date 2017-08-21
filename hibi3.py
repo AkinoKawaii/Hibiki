@@ -31,9 +31,25 @@ async def on_message(message):
  #   if message.content.startswith('=ok'):
      #   await client.send_message(message.channel,'ok')
     if message.content.startswith('h!orders'):
-    embed = discord.Embed(discription = 'INFO h!user h!user <tag> h!say <words> MUSIC h!summon h!play <song/url> h!queue h!pause h!resume h!skip h!shuffle h!disconnect')  
-    embed.set_image(url = 'https://cdn.discordapp.com/attachments/333240041302261761/349152395449860097/Hibi_Support.jpg')
-    await client.send_message(message.channel, embed=embed )
+   await client.send_message(message.channel,"""```         
+INFO
+h!user              show the status user
+h!user <tag>        show the status tagged user
+
+SAY
+h!say <words>       reply your chat
+
+MUSIC
+h!summon            summon me into the VC
+h!play <song/url>   play song
+h!queue             show the queue songs
+h!pause             pause the song
+h!resume            resume the song
+h!skip              skip the song
+h!shuffle           shuffle the song
+h!disconnect        disconnect from the VC
+```""")
+
       
     elif message.content.startswith('h!user'):
         try:
