@@ -31,7 +31,7 @@ async def on_message(message):
  #   if message.content.startswith('=ok'):
      #   await client.send_message(message.channel,'ok')
     if message.content.startswith('h!orders'):
-    embed = discord.Embed("INFO h!user; h!user <tag>; h!say <words> MUSIC h!summon; h!play <song/url>; h!queue; h!pause; h!resume; h!skip; h!shuffle, h!disconnect")        ")
+    embed = discord.Embed("INFO h!user; h!user <tag>; h!say <words> MUSIC h!summon; h!play <song/url>; h!queue; h!pause; h!resume; h!skip; h!shuffle, h!disconnect")  
     embed.set_image(url = "https://cdn.discordapp.com/attachments/333240041302261761/349152395449860097/Hibi_Support.jpg")
     await client.send_message(message.channel, embed = embed_thing)
       
