@@ -51,9 +51,7 @@ h!disconnect        disconnect from the VC
 ```""")
      
    elif message.content.startswith('h!orders'):
-            embed_thing = discord.Embed()
-            embed_thing.set_image(url = "https://cdn.discordapp.com/attachments/333240041302261761/349152395449860097/Hibi_Support.jpg")
-            await client.send_message(message.channel, embed = embed_thing)
+         await client.send_message(message.channel, """<https://cdn.discordapp.com/attachments/333240041302261761/349152395449860097/Hibi_Support.jpg>""")
       
         
     elif message.content.startswith('h!user'):
