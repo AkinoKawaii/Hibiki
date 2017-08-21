@@ -78,3 +78,22 @@ async def on_message(message):
         
     elif message.content.startswith('thank you'):
         await client.send_message(message.channel,"ur welcome")
+      
+              await client.send_message(message.channel,"""```         
+INFO
+h!user              show the status user
+h!user <tag>        show the status tagged user
+
+SAY
+h!say <words>       reply your chat
+
+MUSIC
+h!summon            summon me into the VC
+h!play <song/url>   play song
+h!queue             show the queue songs
+h!pause             pause the song
+h!resume            resume the song
+h!skip              skip the song
+h!shuffle           shuffle the song
+h!disconnect        disconnect from the VC
+```""")
