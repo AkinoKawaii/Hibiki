@@ -31,7 +31,7 @@ async def on_message(message):
  #   if message.content.startswith('=ok'):
      #   await client.send_message(message.channel,'ok')
     if message.content.startswith('h!orders'):
-   await client.send_message(message.channel,"""```         
+        await client.send_message(message.channel,"""```         
 INFO
 h!user              show the status user
 h!user <tag>        show the status tagged user
