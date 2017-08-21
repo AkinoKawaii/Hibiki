@@ -144,8 +144,10 @@ h!disconnect        disconnect from the VC
             text = re.findall('h!say\s(.*)',message.content)
             refined = ' '.join(text)
             await client.send_message(message.channel, '{0}'.format(refined))
-            
-     elif message.content.startswith('h!order'):
+
+@client.event
+async def on_message(message):            
+     if message.content.startswith('h!order'):
          await client.send_message(message.channel, "<https://cdn.discordapp.com/attachments/333240041302261761/349152395449860097/Hibi_Support.jpg>")
             
 
