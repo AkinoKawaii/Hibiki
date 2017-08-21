@@ -32,6 +32,8 @@ async def on_message(message):
      #   await client.send_message(message.channel,'ok')
     if message.content.startswith('h!orders'):
         await client.send_message(message.channel,"""```
+        <https://cdn.discordapp.com/attachments/333240041302261761/349152395449860097/Hibi_Support.jpg>
+            
 INFO
 h!user              show the status user
 h!user <tag>        show the status tagged user
@@ -144,12 +146,6 @@ h!disconnect        disconnect from the VC
             text = re.findall('h!say\s(.*)',message.content)
             refined = ' '.join(text)
             await client.send_message(message.channel, '{0}'.format(refined))
-
-@client.event
-async def on_message(message):            
-     if message.content.startswith('h!order'):
-         await client.send_message(message.channel, "<https://cdn.discordapp.com/attachments/333240041302261761/349152395449860097/Hibi_Support.jpg>")
-            
 
 @client.event
 async def on_member_update(before, after):
