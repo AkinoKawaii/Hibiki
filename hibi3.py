@@ -49,7 +49,6 @@ h!skip              skip the song
 h!shuffle           shuffle the song
 h!disconnect        disconnect from the VC
 ```""")
-
       
     elif message.content.startswith('h!user'):
         try:
