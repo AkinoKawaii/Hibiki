@@ -31,7 +31,7 @@ async def on_message(message):
  #   if message.content.startswith('=ok'):
      #   await client.send_message(message.channel,'ok')
     if message.content.startswith('h!orders'):
-        await client.send_message(message.channel,"""https://cdn.discordapp.com/attachments/333240041302261761/349152395449860097/Hibi_Support.jpg```         
+        await client.send_message(message.channel,"""```         
 INFO
 h!user              show the status user
 h!user <tag>        show the status tagged user
@@ -48,6 +48,8 @@ h!resume            resume the song
 h!skip              skip the song
 h!shuffle           shuffle the song
 h!disconnect        disconnect from the VC
+
+https://cdn.discordapp.com/attachments/333240041302261761/349152395449860097/Hibi_Support.jpg
 ```""")
       
     elif message.content.startswith('h!user'):
