@@ -50,9 +50,7 @@ h!shuffle           shuffle the song
 h!disconnect        disconnect from the VC
 ```""")
      
-@client.event
-async def on_message(message):
-   if message.content.startswith('h!orders'):
+   elif message.content.startswith('h!orders'):
         embed_thing = discord.Embed()
         embed_thing.set_image(url = "https://cdn.discordapp.com/attachments/333240041302261761/349152395449860097/Hibi_Support.jpg")
         await client.send_message(message.channel, embed = embed_thing)
