@@ -138,10 +138,10 @@ h!disconnect        disconnect from the VC
             await client.send_typing(message.channel)
             await client.send_message(message.channel,new)
                   
-    elif message.content.startswith('h!say'):
-        if message.content == 'h!say':return
+    elif message.content.startswith('h!!say'):
+        if message.content == 'h!!say':return
         else:
-            text = re.findall('h!say\s(.*)',message.content)
+            text = re.findall('h!!say\s(.*)',message.content)
             refined = ' '.join(text)
             await client.send_message(message.channel, '{0}'.format(refined))
     
