@@ -190,5 +190,4 @@ async def on_message(message):
         elif message.centent.startswith('Invite'):
             await cliet.send_message(message.channel,"<https://cdn.discordapp.com/attachments/333240041302261761/349152395449860097/Hibi_Support.jpg>"
 
-print('Starting....')
 client.run('MzMzMDgxMjEyMDY1Mjg0MDk2.DGhzpQ.1aGHRakWrOz-MMDk6i5m6KsJ7ag')
