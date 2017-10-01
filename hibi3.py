@@ -187,5 +187,5 @@ async def on_message(message):
         if message.content.startswith('Invite'):
             await client.send_message(message.channel,"https://discordapp.com/oauth2/authorize?client_id=355929478527975445&scope=bot&permissions=506522792")
         
-Print('Starting...)
+    print('Starting...)
 client.run('MzMzMDgxMjEyMDY1Mjg0MDk2.DLIFng.YYQ52wlHbGBcEq0MCdd0XRxM0PY')
