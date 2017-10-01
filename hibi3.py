@@ -187,7 +187,4 @@ async def on_message(message):
         if message.content.startswith('Invite'):
             await client.send_message(message.channel,"https://discordapp.com/oauth2/authorize?client_id=355929478527975445&scope=bot&permissions=506522792")
         
-        elif message.centent.startswith('Invite'):
-            await cliet.send_message(message.channel,"<https://cdn.discordapp.com/attachments/333240041302261761/349152395449860097/Hibi_Support.jpg>"
-
 client.run('MzMzMDgxMjEyMDY1Mjg0MDk2.DLIFng.YYQ52wlHbGBcEq0MCdd0XRxM0PY')
