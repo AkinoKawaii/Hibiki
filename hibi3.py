@@ -177,7 +177,7 @@ async def on_member_update(before, after):
 @client.event
 async def on_member_remove(member):
     server = member.server
-    fmt = '{0.mention} leave the {1.name} server'
+    fmt = '{0.name} leave the {1.name} server'
     await client.send_message(server, fmt.format(member, server))
 @client.event
 async def on_member_join(member):
