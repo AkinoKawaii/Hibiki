@@ -24,37 +24,37 @@ async def on_ready():
     print(client.user.name)
     print(client.user.id)
     print('------')
-    await client.change_presence( game=discord.Game( name="h!orders | Orders", type = 0))
+    await client.change_presence( game=discord.Game( name="Show", type = 0))
 @client.event
 async def on_message(message):
     random_color = colors()
  #   if message.content.startswith('=ok'):
      #   await client.send_message(message.channel,'ok')
-    if message.content.startswith('h!orders'):
+    if message.content.startswith('Show'):
         await client.send_message(message.channel,"""```         
 INFO
-h!user              show the status user
-h!user <tag>        show the status tagged user
+user              show the status user
+user <tag>        show the status tagged user
 
 SAY
-h!say <words>       reply your chat
+say <words>       reply your chat
 
-MUSIC
-h!summon            summon me into the VC
-h!play <song/url>   play song
-h!queue             show the queue songs
-h!pause             pause the song
-h!resume            resume the song
-h!skip              skip the song
-h!shuffle           shuffle the song
-h!disconnect        disconnect from the VC
+MUSIC (h:prefix)
+hsummon            summon me into the VC
+hplay <song/url>   play song
+hqueue             show the queue songs
+hpause             pause the song
+hresume            resume the song
+hskip              skip the song
+hshuffle           shuffle the song
+hdisconnect        disconnect from the VC
 ```""")
       
-    elif message.content.startswith('h!user'):
+    elif message.content.startswith('user'):
         try:
             if message.channel.id !='274387797140570112':
                 coloursman = int(random_color['color'])
-                if message.content == 'h!user':
+                if message.content == 'user':
                     discord.Member = None
                     author = message.author
                     if not discord.Member :
@@ -89,7 +89,7 @@ h!disconnect        disconnect from the VC
            
            
                 else:
-                    check_tagger = re.findall('h!user\s(.*)',message.content)
+                    check_tagger = re.findall('user\s(.*)',message.content)
         
                     hilol_ = ' '.join(check_tagger)
                     no1is = re.sub(r'[^\w]', ' ', hilol_)
@@ -138,10 +138,10 @@ h!disconnect        disconnect from the VC
             await client.send_typing(message.channel)
             await client.send_message(message.channel,new)
                   
-    elif message.content.startswith('h!!say'):
-        if message.content == 'h!!say':return
+    elif message.content.startswith('say'):
+        if message.content == 'say':return
         else:
-            text = re.findall('h!!say\s(.*)',message.content)
+            text = re.findall('say\s(.*)',message.content)
             refined = ' '.join(text)
             await client.send_message(message.channel, '{0}'.format(refined))
     
@@ -181,7 +181,10 @@ async def on_member_join(member):
     server = member.server
     fmt = 'Welcome {0.mention} to {1.name}!'
     await client.send_message(server, fmt.format(member, server))
-      
-  
+@client.event
+async def on_message(message):
+if message.content.startswith('pp'):
+        await client.send_message(message.channel,(url = discord.Member.avatar_url))
+
 print('Starting....')
 client.run('MzMzMDgxMjEyMDY1Mjg0MDk2.DGhzpQ.1aGHRakWrOz-MMDk6i5m6KsJ7ag')
