@@ -144,7 +144,7 @@ hdisconnect        disconnect from the VC
             text = re.findall('say\s(.*)',message.content)
             refined = ' '.join(text)
             await client.send_message(message.channel, '{0}'.format(refined))
-    
+################################################SERVER-NOTIF#####################################################    
 @client.event
 async def on_member_update(before, after):
         server = after.server
@@ -181,6 +181,11 @@ async def on_member_join(member):
     server = member.server
     fmt = 'Welcome {0.mention} to {1.name}!'
     await client.send_message(server, fmt.format(member, server))
+##############################################INVITE###########################################
+@client.event
+async def on_message(message):
+        if message.content.startswith('Invite'):
+         await client.send_message(message.channel,"https://discordapp.com/oauth2/authorize?client_id=355929478527975445&scope=bot&permissions=506522792")
 
 print('Starting....')
 client.run('MzMzMDgxMjEyMDY1Mjg0MDk2.DGhzpQ.1aGHRakWrOz-MMDk6i5m6KsJ7ag')
