@@ -31,24 +31,7 @@ async def on_message(message):
  #   if message.content.startswith('=ok'):
      #   await client.send_message(message.channel,'ok')
     if message.content.startswith('Show'):
-        await client.send_message(message.channel,"""```         
-INFO
-user              show the status user
-user <tag>        show the status tagged user
-
-SAY
-say <words>       reply your chat
-
-MUSIC (h:prefix)
-hsummon            summon me into the VC
-hplay <song/url>   play song
-hqueue             show the queue songs
-hpause             pause the song
-hresume            resume the song
-hskip              skip the song
-hshuffle           shuffle the song
-hdisconnect        disconnect from the VC
-```""")
+        await client.send_message(message.channel,"https://cdn.discordapp.com/attachments/333240041302261761/376507909615517698/Untitled-1_copy-02.jpeg")
       
     elif message.content.startswith('user'):
         try:
