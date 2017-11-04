@@ -31,7 +31,7 @@ async def on_message(message):
  #   if message.content.startswith('=ok'):
      #   await client.send_message(message.channel,'ok')
     if message.content.startswith('Show'):
-        await client.send_message(message.channel,"https://cdn.discordapp.com/attachments/333240041302261761/376507909615517698/Untitled-1_copy-02.jpeg")
+        await client.send_message(message.channel,"http://bit.ly/2zwECwH")
       
     elif message.content.startswith('user'):
         try:
