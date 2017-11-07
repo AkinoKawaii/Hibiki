@@ -171,7 +171,7 @@ async def on_member_join(member):
 @client.event
 async def on_message(message):
     if message.content.startswith('say'):
-        msg = await client.get_message(channel, message_id)
+        msg = await client.send_message(message.channel, message_id)
         await client.delete_message(msg)
         
 client.run('MzMzMDgxMjEyMDY1Mjg0MDk2.DLIFng.YYQ52wlHbGBcEq0MCdd0XRxM0PY')
