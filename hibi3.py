@@ -31,7 +31,7 @@ async def on_message(message):
  #   if message.content.startswith('=ok'):
      #   await client.send_message(message.channel,'ok')
     if message.content.startswith('Show'):
-        await client.send_message(message.channel,"http://bit.ly/2zwECwH")
+        await client.send_message(message.channel,"http://bit.ly/2zwECwH http://bit.ly/2AogxWd")
       
     elif message.content.startswith('user'):
         try:
