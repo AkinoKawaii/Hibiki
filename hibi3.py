@@ -122,7 +122,7 @@ async def on_message(message):
             await client.send_message(message.channel,new)
             
     elif message.content.startswith('Invite'):
-            await client.send_message(message.channel,"https://discordapp.com/oauth2/authorize?client_id=355929478527975445&scope=bot&permissions=506522792")
+            await client.send_message(message.channel,"https://discordapp.com/oauth2/authorize?client_id=333081212065284096&scope=bot&permissions=506522792")
                   
     elif message.content.startswith('say'):
         if message.content == 'say':return
