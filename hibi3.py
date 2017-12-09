@@ -166,4 +166,4 @@ async def on_message(message):
         role = discord.utils.get(server.roles, name="greentea")
         await client.add_roles(member, role)
         
-client.run('')
+client.run('MzMzMDgxMjEyMDY1Mjg0MDk2.DQ1G-Q.bKD2aRauy0lhqj4Nt8gaYb_2OJc')
