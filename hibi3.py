@@ -163,7 +163,7 @@ async def on_member_join(member):
 @client.event
 async def on_message(message):
     if message.content.startswith('.iam greentea'):
-        role = discord.utils.get(server.roles, name="@greentea")
+        role = discord.utils.get(server.roles, name="388987647030460416")
         await client.add_roles(member, role)
         
 client.run('MzMzMDgxMjEyMDY1Mjg0MDk2.DQ1G-Q.bKD2aRauy0lhqj4Nt8gaYb_2OJc')
