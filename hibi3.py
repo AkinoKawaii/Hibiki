@@ -159,5 +159,11 @@ async def on_member_join(member):
     server = member.server
     fmt = 'Welcome {0.mention} to {1.name}! http://bit.ly/2AogpWJ'
     await client.send_message(client.get_channel('388822871780229125'), server, fmt.format(member, server))
+################################roles#########################
+@client.event
+async def on_message(message):
+    if message.content.startswith('.iam greentea'):
+        role = discord.utils.get(server.roles, name="greentea")
+        await client.add_roles(member, role)
         
 client.run('')
