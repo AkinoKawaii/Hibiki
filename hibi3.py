@@ -160,4 +160,4 @@ async def on_member_join(member):
     fmt = 'Welcome {0.mention} to {1.name}! http://bit.ly/2AogpWJ'
     await client.send_message(client.get_channel('388822871780229125'), server, fmt.format(member, server))
         
-client.run('MzMzMDgxMjEyMDY1Mjg0MDk2.DQzZpA.gG95HFQM3iFMMROjR7jd9q99Bdk')
+client.run('')
