@@ -151,7 +151,7 @@ async def on_member_update(before, after):
 @client.event
 async def on_message(message):
     if message.content.startswith('cmd'):
-        embed = discord.Embed(image='https://raw.githubusercontent.com/AkinoKawaii/Hibiki/master/command.jpeg')
+        embed = discord.Embed(icon_url='https://raw.githubusercontent.com/AkinoKawaii/Hibiki/master/command.jpeg')
         embed.set_author(name='my commands')
         await client.send_message(message.channel, embed=embed)
     
