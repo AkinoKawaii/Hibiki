@@ -154,12 +154,13 @@ async def on_member_remove(member):
     server = member.server
     fmt = '{0.name} leave the {1.name} server http://bit.ly/2zUBmeT'
     await client.get_channel('388834987253825537')
-    await client.send_message(server, fmt.format(member, server))
+    await client.send_message(server, fmt.format(member, server)
     
 @client.event
 async def on_member_join(member):
     server = member.server
     fmt = '{0.name} Welcome to {1.name}! http://bit.ly/2AogpWJ'
-    await client.send_message(client.get_channel('388822871780229125'), server, fmt.format(member, server))
+    await client.get_channel('388822871780229125') 
+    await client.send_message(server, fmt.format(member, server)
         
 client.run('MzMzMDgxMjEyMDY1Mjg0MDk2.DRpmzg.lURkk8yVYnsEGS7SpdeGDM3sN0E')
