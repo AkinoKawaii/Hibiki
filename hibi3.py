@@ -151,7 +151,7 @@ async def on_member_update(before, after):
 @client.event
 async def on_message(message):
     if message.content.startswith('cmd'):
-        embed.set_image(url='https://raw.githubusercontent.com/AkinoKawaii/Hibiki/master/command.jpeg')
+        embed = embed.set_image(url='https://raw.githubusercontent.com/AkinoKawaii/Hibiki/master/command.jpeg')
         await client.send_message(message.channel, embed=embed)
     
 print('Starting....')
