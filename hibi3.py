@@ -149,6 +149,13 @@ async def on_member_update(before, after):
                         await client.send_message(client.get_channel('388834987253825537'), after.server, embed=embed)
                         
 @client.event
+async def on_member_remove(member):
+    server = member.server
+    fmt = '{0.name} leave the {1.name} server http://bit.ly/2zUBmeT'
+    await client.get_channel('388822871780229125')
+    await client.send_message(server, fmt.format(member, server)
+                        
+@client.event
 async def on_member_join(member):
     server = member.server
     fmt = '{0.name} http://bit.ly/2AogpWJ'
