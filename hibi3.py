@@ -133,7 +133,7 @@ async def on_message(message):
 @client.event
 async def on_message(message):
     if message.content.startswith('cmd'):
-        embed = discord.Embed(colour=#5be783)
+        embed = discord.Embed(title='commands', colour=#5be783)
         embed.set_image(url="https://raw.githubusercontent.com/AkinoKawaii/Hibiki/master/command.jpeg")
         await client.send_message(message.channel, embed=embed)
 @client.event
