@@ -151,8 +151,8 @@ async def on_member_update(before, after):
 @client.event
 async def on_message(message):
     if message.content.startswith('cmd'):
-        embed = discord.Embed(description= icon_url=https://github.com/AkinoKawaii/Hibiki/blob/master/command.jpeg)
-        embed.set_author(name='Hibiki Commands')
+        embed = discord.Embed(description='')
+        embed.set_author(name='Hibiki Commands', icon_url=https://github.com/AkinoKawaii/Hibiki/blob/master/command.jpeg)
         await client.send_message(message.channel, embed=embed)
     
 print('Starting....')
