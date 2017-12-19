@@ -25,7 +25,7 @@ async def on_ready():
     print(client.user.id)
     print('------')
     await client.change_presence( game=discord.Game( name="Show | Invite", type = 0)
-                                 
+
 @client.event
 async def on_message(message):
     random_color = colors()
@@ -131,33 +131,3 @@ async def on_message(message):
             text = re.findall('say\s(.*)',message.content)
             refined = ' '.join(text)
             await client.send_message(message.channel, '{0}'.format(refined))
-################################################SERVER-NOTIF#####################################################    
-@client.event
-async def on_member_update(before, after):
-        server = after.server
-        member = after
-        if before.roles != after.roles:
-            if len(before.roles) > len(after.roles):
-                for role in before.roles:
-                    if role not in after.roles:
-                        embed = discord.Embed(description='{0.display_name} ({0.id}) lost the {1.name} role'.format(before, role))
-                        embed.set_author(name='Role removed', icon_url=member.avatar_url)
-                        await client.send_message(client.get_channel('388834987253825537'), after.server, embed=embed)
-            elif len(before.roles) < len(after.roles):
-                for role in after.roles:
-                    if role not in before.roles:
-                        embed = discord.Embed(description='{0.display_name} ({0.id}) got the {1.name} role'.format(before, role))
-                        embed.set_author(name='Role applied', icon_url=member.avatar_url)
-                        await client.send_message(client.get_channel('388834987253825537'), after.server, embed=embed)
-@client.event
-async def on_member_join(member):
-    server = member.server
-    fmt = '{0.name} http://bit.ly/2AogpWJ'
-    await client.send_message(server, fmt.format(member, server)
-@client.event
-async def on_member_remove(member):
-    server = member.server
-    fmt = '{0.name} leave the {1.name} server http://bit.ly/2zUBmeT'
-    await client.send_message(server, fmt.format(member, server)
-        
-client.run('MzMzMDgxMjEyMDY1Mjg0MDk2.DRpmzg.lURkk8yVYnsEGS7SpdeGDM3sN0E')
