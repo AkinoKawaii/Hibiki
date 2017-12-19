@@ -153,7 +153,7 @@ async def on_message(message):
     if message.content.startswith('cmd'):
         embed = discord.Embed(description='http://bit.ly/2zwECwH')
         embed.set_author(name='Hibiki Commands')
-        await client.send_message(server, embed=embed)
+        await client.send_message(message.channel, embed=embed)
     
 print('Starting....')
 client.run('MzMzMDgxMjEyMDY1Mjg0MDk2.DRpmzg.lURkk8yVYnsEGS7SpdeGDM3sN0E')
