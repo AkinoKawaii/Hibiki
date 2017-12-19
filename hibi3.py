@@ -147,13 +147,5 @@ async def on_member_update(before, after):
                         embed.set_author(name='Role applied', icon_url=member.avatar_url)
                         await client.send_message(client.get_channel('388834987253825537'), after.server, embed=embed)
 
-      
-        #except:
-            #traceback.print_exc()
-          #  await client.send_message(message.channel,"```Unknown Error.```")\
-        except Exception as e: print (str(e))
-           
-                
-
 print('Starting....')
-client.run('MzMzMDgxMjEyMDY1Mjg0MDk2.DEIi6w.JCNGkZ0PTyENoCQkB3uMyZ_J9kc')
+client.run('MzMzMDgxMjEyMDY1Mjg0MDk2.DRpmzg.lURkk8yVYnsEGS7SpdeGDM3sN0E')
