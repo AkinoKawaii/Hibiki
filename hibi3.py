@@ -152,7 +152,7 @@ async def on_member_update(before, after):
 @client.event
 async def on_message(message):
     if message.content.startswith('.set greentea'):
-         role = discord.utils.get(server.roles.name = "greentea")
+         role = discord.utils.get(server.roles, name = "greentea")
          await client.add_roles(member, role)
                 
 @client.event
