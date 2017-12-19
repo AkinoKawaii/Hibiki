@@ -128,7 +128,23 @@ async def on_message(message):
             text = re.findall('say\s(.*)',message.content)
             refined = ' '.join(text)
             await client.send_message(message.channel, '{0}'.format(refined))
-
+@client.event
+async def on_member_update(before, after):
+        server = after.server
+        member = after
+        if before.roles != after.roles:
+            if len(before.roles) > len(after.roles):
+                for role in before.roles:
+                    if role not in after.roles:
+                        embed = discord.Embed(description='{0.display_name} ({0.id}) lost the {1.name} role'.format(before, role))
+                        embed.set_author(name='Role removed', icon_url=member.avatar_url)
+                        await client.send_message(client.get_channel('388834987253825537'), after.server, embed=embed)
+            elif len(before.roles) < len(after.roles):
+                for role in after.roles:
+                    if role not in before.roles:
+                        embed = discord.Embed(description='{0.display_name} ({0.id}) got the {1.name} role'.format(before, role))
+                        embed.set_author(name='Role applied', icon_url=member.avatar_url)
+                        await client.send_message(client.get_channel('388834987253825537'), after.server, embed=embed)
 
       
         #except:
