@@ -155,7 +155,7 @@ async def on_member_remove(member):
     fmt = '{0.name} leave the {1.name} server http://bit.ly/2zUBmeT'
     await client.send_message(server, fmt.format(member, server)  
 @client.event
-async def on_member_join(member):
+discord.on_member_join(member):
     server = member.server
     fmt = '{0.name} Welcome to {1.name}! http://bit.ly/2AogpWJ'
     await client.send_message(server, fmt.format(member, server)
