@@ -150,12 +150,6 @@ async def on_member_update(before, after):
                         await client.send_message(client.get_channel('388834987253825537'), after.server, embed=embed)
 ##################################role-add#############################
 @client.event
-async def on_message(message):
-    if message.content.startswith('.set greentea'):
-         role = discord.utils.get(server.roles, name = "greentea")
-         await client.add_roles(member, role)
-                
-@client.event
 async def on_member_remove(member):
     server = member.server
     fmt = '{0.name} leave the {1.name} server http://bit.ly/2zUBmeT'
