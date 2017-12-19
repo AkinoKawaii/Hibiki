@@ -131,12 +131,6 @@ async def on_message(message):
             refined = ' '.join(text)
             await client.send_message(message.channel, '{0}'.format(refined))
 @client.event
-async def on_message(message):
-    if message.content.startswith('cmd'):
-        embed = discord.Embed(title='commands', colour=#5be783)
-        embed.set_image(url="https://raw.githubusercontent.com/AkinoKawaii/Hibiki/master/command.jpeg")
-        await client.send_message(message.channel, embed=embed)
-@client.event
 async def on_member_update(before, after):
         server = after.server
         member = after
