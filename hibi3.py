@@ -24,20 +24,8 @@ async def on_ready():
     print(client.user.name)
     print(client.user.id)
     print('------')
-    await client.change_presence( game=discord.Game( name="Show | Invite", type = 0))
-################################################join leave#########################################################
-@client.event
-async def on_member_join(member):
-    server = member.server
-    fmt = '{0.name} http://bit.ly/2AogpWJ'
-    await client.send_message(server, fmt.format(member, server)
-@client.event
-async def on_member_remove(member):
-    server = member.server
-    fmt = '{0.name} leave the {1.name} server http://bit.ly/2zUBmeT'
-    await client.send_message(server, fmt.format(member, server)
-###################################################################################################################
-
+    await client.change_presence( game=discord.Game( name="Show | Invite", type = 0)
+                                 
 @client.event
 async def on_message(message):
     random_color = colors()
