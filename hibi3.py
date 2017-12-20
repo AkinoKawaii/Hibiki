@@ -131,26 +131,9 @@ async def on_message(message):
             refined = ' '.join(text)
             await client.send_message(message.channel, '{0}'.format(refined))
 @client.event
-async def on_member_update(before, after):
-        server = after.server
-        member = after
-        if before.roles != after.roles:
-            if len(before.roles) > len(after.roles):
-                for role in before.roles:
-                    if role not in after.roles:
-                        embed = discord.Embed(description='{0.display_name} ({0.id}) lost the {1.name} role'.format(before, role))
-                        embed.set_author(name='Role removed', icon_url=member.avatar_url)
-                        await client.send_message(client.get_channel('388834987253825537'), after.server, embed=embed)
-            elif len(before.roles) < len(after.roles):
-                for role in after.roles:
-                    if role not in before.roles:
-                        embed = discord.Embed(description='{0.display_name} ({0.id}) got the {1.name} role'.format(before, role))
-                        embed.set_author(name='Role applied', icon_url=member.avatar_url)
-                        await client.send_message(client.get_channel('388834987253825537'), after.server, embed=embed)
-@client.event
 async def on_message(message):
     if message.content.startswith('cmd'):
-        embed = discord.Embed(title=Commands List, color=0x00ce5c)
+        embed=discord.Embed(title=Commands List, color=0x00ce5c)
         embed.set_author(name=Command List)
         embed.add_field(name=user, value=User info, inline=False)
         embed.add_field(name=say, value=Repeat your words, inline=False)
@@ -169,7 +152,23 @@ async def on_message(message):
         embed.add_field(name=hdisconnect, value=disconnect Hibiki from #VoiceChannel, inline=False)
         embed.set_footer(text=made by OnikaStudio)
         embed.set_image(url=https://raw.githubusercontent.com/AkinoKawaii/Hibiki/master/hibikiprofiile.png)
-        await self.bot.say(embed=embed)                    
-                         
+        await self.bot.say(embed=embed)            
+@client.event
+async def on_member_update(before, after):
+        server = after.server
+        member = after
+        if before.roles != after.roles:
+            if len(before.roles) > len(after.roles):
+                for role in before.roles:
+                    if role not in after.roles:
+                        embed = discord.Embed(description='{0.display_name} ({0.id}) lost the {1.name} role'.format(before, role))
+                        embed.set_author(name='Role removed', icon_url=member.avatar_url)
+                        await client.send_message(client.get_channel('388834987253825537'), after.server, embed=embed)
+            elif len(before.roles) < len(after.roles):
+                for role in after.roles:
+                    if role not in before.roles:
+                        embed = discord.Embed(description='{0.display_name} ({0.id}) got the {1.name} role'.format(before, role))
+                        embed.set_author(name='Role applied', icon_url=member.avatar_url)
+                        await client.send_message(client.get_channel('388834987253825537'), after.server, embed=embed)                         
 print('Starting....')
 client.run('MzMzMDgxMjEyMDY1Mjg0MDk2.DRs-OA.inWxGr07ZiJmOTVsAvMKiuYyRwU')
