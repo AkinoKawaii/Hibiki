@@ -3,7 +3,6 @@ import asyncio
 import re
 import random
 import talking
-import someem
 client = discord.Client()
 def colors():
     list_colors = [{'color':"16777215"},{'color':"16711680"},{'color':"0"},{'color':"255"},{'color':"8388736"},{'color':"65535"},{'color':"8421504"},{'color':"8421504"},{'color':"10040319"}]
