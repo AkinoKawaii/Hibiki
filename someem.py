@@ -2,6 +2,7 @@ import discord
 import asyncio
 import hibi3
 client = discord.Client()
+
 @client.event
 async def on_message(message):
     if message.content.startswith('cmd'):
@@ -26,4 +27,3 @@ async def on_message(message):
         embed.set_image(url='https://raw.githubusercontent.com/AkinoKawaii/Hibiki/master/music.png')
         await client.send_message(message.channel,embed=embed)
         
-client.run('MzMzMDgxMjEyMDY1Mjg0MDk2.DRs-OA.inWxGr07ZiJmOTVsAvMKiuYyRwU')
