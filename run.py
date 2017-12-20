@@ -6,6 +6,19 @@ import re
 import random
 import talking
 client = discord.Client()
+def colors():
+    list_colors = [{'color':"16777215"},{'color':"16711680"},{'color':"0"},{'color':"255"},{'color':"8388736"},{'color':"65535"},{'color':"8421504"},{'color':"8421504"},{'color':"10040319"}]
+    random_color = random.choice(list_colors)
+    random_color['color']
+    return random_color
+def escape_mass_mentions(text):
+    words = {
+        "@everyone": "@\u200beveryone",
+        "@here": "@\u200bhere"
+    }
+    for k, v in words.items():
+        text = text.replace(k, v)
+    return text
 @client.event
 async def on_ready():
     print('Logged in as')
