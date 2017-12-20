@@ -12,5 +12,5 @@ async def on_message(message):
 @client.event
 async def on_messsage(message):
     if message.content.startswith('null'):
-        await client.send_message(message.channel, '0')
+        await client.send_message(message.channel, "0")
         
