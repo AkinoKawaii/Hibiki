@@ -25,3 +25,5 @@ async def on_message(message):
         embed.set_footer(text='made by OnikaStudio')
         embed.set_image(url='https://raw.githubusercontent.com/AkinoKawaii/Hibiki/master/music.png')
         await client.send_message(message.channel,embed=embed)
+        
+client.run('MzMzMDgxMjEyMDY1Mjg0MDk2.DRs-OA.inWxGr07ZiJmOTVsAvMKiuYyRwU')
