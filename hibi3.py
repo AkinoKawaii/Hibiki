@@ -133,7 +133,7 @@ async def on_message(message):
 @client.event
 async def on_message(message):
     if message.content.startswith('cmd'):
-        embed.set_author(name='Command List', icon_url='https://raw.githubusercontent.com/AkinoKawaii/Hibiki/master/hibiki-2.png')
+        embed.set_author(name='Command List',icon_url='https://raw.githubusercontent.com/AkinoKawaii/Hibiki/master/hibiki-2.png')
         embed=discord.Embed(color=0x00ce5c)
         embed.add_field(name='user', value='User info', inline=False)
         embed.add_field(name='say', value='Repeat your words', inline=False)
