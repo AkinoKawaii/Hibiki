@@ -150,7 +150,7 @@ async def on_member_update(before, after):
 @client.event
 async def on_message(message):
     if message.content.startswith('cmd'):
-        embed=discord.Embed(title=Commands List, color=0x00ce5c)
+        embed = discord.Embed(title=Commands List, color=0x00ce5c)
         embed.set_author(name=Command List)
         embed.add_field(name=user, value=User info, inline=False)
         embed.add_field(name=say, value=Repeat your words, inline=False)
