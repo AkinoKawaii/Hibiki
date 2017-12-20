@@ -155,9 +155,7 @@ async def on_message(message):
         em.set_image(url="https://raw.githubusercontent.com/AkinoKawaii/Hibiki/master/hibikiprofiile.png")
         await client.send_message(message.channel, embed=em)
                          
-@client.event
-async def on_message(message):
-    if message.content.startswith('Music'):
+    elif message.content.startswith('Music'):
         em=discord.Embed(tittle='music commands', description='hsummon, hplay, hpause, hresume, hskip, hvolume, hsearch, hshuffle, hdisconnect', colour=#4eeb9b)
         em.set_image(url="https://raw.githubusercontent.com/AkinoKawaii/Hibiki/master/music.png")
         await client.send_message(message.channel, embed=em)                          
