@@ -148,6 +148,13 @@ async def on_member_update(before, after):
                         embed = discord.Embed(description='{0.display_name} ({0.id}) got the {1.name} role'.format(before, role))
                         embed.set_author(name='Role applied', icon_url=member.avatar_url)
                         await client.send_message(client.get_channel('388834987253825537'), after.server, embed=embed)
+ 
+@client.event
+async def on_message(message):
+    if message.content.startswith('cmd'):
+        em=discord.Embed(description='test')
+        embed.set_author(name='test')
+        await client.send_message(message.channel,embed=em)
 
 print('Starting....')
 client.run('MzMzMDgxMjEyMDY1Mjg0MDk2.DRs-OA.inWxGr07ZiJmOTVsAvMKiuYyRwU')
