@@ -14,3 +14,5 @@ async def on_message(message):
 async def on_messsage(message):
     if message.content.startswith('null'):
         await client.send_message(message.channel, '0')
+        
+client.run('MzMzMDgxMjEyMDY1Mjg0MDk2.DRs-OA.inWxGr07ZiJmOTVsAvMKiuYyRwU')
