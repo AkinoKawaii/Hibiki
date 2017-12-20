@@ -151,10 +151,10 @@ async def on_member_update(before, after):
  
 @client.event
 async def on_message(message):
-    if message.content.startswith('cmd'):
-        em=discord.Embed(description='test')
-        embed.set_author(name='test')
-        await client.send_message(message.channel,embed=em)
+        if message.content.startswith('cmd'):
+            em=discord.Embed(description='test')
+            embed.set_author(name='test')
+            await client.send_message(message.channel,embed=em)
 
 print('Starting....')
 client.run('MzMzMDgxMjEyMDY1Mjg0MDk2.DRs-OA.inWxGr07ZiJmOTVsAvMKiuYyRwU')
