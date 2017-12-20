@@ -133,7 +133,8 @@ async def on_message(message):
 @client.event
 async def on_message(message):
     if message.content.startswith('cmd'):
-        embed=discord.Embed(title='Commands List', color=0x00ce5c)
+        embed.set_author(name='Command List', icon_url='https://raw.githubusercontent.com/AkinoKawaii/Hibiki/master/hibiki-2.png')
+        embed=discord.Embed(color=0x00ce5c)
         embed.add_field(name='user', value='User info', inline=False)
         embed.add_field(name='say', value='Repeat your words', inline=False)
         embed.add_field(name='Invite', value='Send Invite(bot) link', inline=False)
@@ -150,7 +151,7 @@ async def on_message(message):
         embed.add_field(name='hsearch', value='searching the song #YouTube', inline=False)
         embed.add_field(name='hdisconnect', value='disconnect Hibiki from #VoiceChannel', inline=False)
         embed.set_footer(text='made by OnikaStudio')
-        embed.set_image(url='https://raw.githubusercontent.com/AkinoKawaii/Hibiki/master/hibikiprofiile.png')
+        embed.set_image(url='https://raw.githubusercontent.com/AkinoKawaii/Hibiki/master/music.png')
         await client.send_message(message.channel,embed=embed)            
 @client.event
 async def on_member_update(before, after):
