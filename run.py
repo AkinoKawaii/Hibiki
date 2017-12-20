@@ -168,7 +168,7 @@ async def on_message(message):
         embed.add_field(name='hdisconnect', value='disconnect Hibiki from #VoiceChannel', inline=False)
         embed.set_footer(text='made by OnikaStudio')
         embed.set_image(url='https://raw.githubusercontent.com/AkinoKawaii/Hibiki/master/music.png')
-                await client.send_message(message.channel,embed=embed)                        
+            await client.send_message(message.channel,embed=embed)                        
 print('Starting....')
 client.run('MzMzMDgxMjEyMDY1Mjg0MDk2.DRs-OA.inWxGr07ZiJmOTVsAvMKiuYyRwU')
 
