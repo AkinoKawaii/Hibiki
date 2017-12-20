@@ -1,6 +1,6 @@
-import re
 import asyncio
 import discord
+client = discord.Client()
 
 @client.event
 async def on_message(message):
@@ -13,3 +13,4 @@ async def on_message(message):
 async def on_messsage(message):
     if message.content.startswith('null'):
         await client.send_message(message.channel, '0')
+        
