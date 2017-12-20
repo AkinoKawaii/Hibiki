@@ -2,6 +2,9 @@ import discord
 import asyncio
 import hibi3
 import someem
+import re
+import random
+import talking
 client = discord.Client()
 @client.event
 async def on_ready():
