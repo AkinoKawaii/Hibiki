@@ -171,5 +171,5 @@ async def on_member_update(before, after):
                         await client.send_message(client.get_channel('388834987253825537'), after.server, embed=embed)
                            
 print('Starting....')
-client.run('MzMzMDgxMjEyMDY1Mjg0MDk2.DRs-OA.inWxGr07ZiJmOTVsAvMKiuYyRwU')
+client.run('')
 
