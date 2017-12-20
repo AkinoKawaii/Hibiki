@@ -24,7 +24,7 @@ async def on_ready():
     print(client.user.name)
     print(client.user.id)
     print('------')
-    await client.change_presence( game=discord.Game( name="Show | Invite", type = 1))
+    await client.change_presence( game=discord.Game( name="cmd", type = 1))
     
 @client.event
 async def on_message(message):
@@ -151,9 +151,16 @@ async def on_member_update(before, after):
 @client.event
 async def on_message(message):
     if message.content.startswith('cmd'):
-        em=discord.Embed(description='commands : user say Invite Hibiki Music', colour=#4eeb9b)
+        em=discord.Embed(title='commands', description='user say Invite Hibiki Music', colour=#4eeb9b)
         em.set_image(url="https://raw.githubusercontent.com/AkinoKawaii/Hibiki/master/hibikiprofiile.png")
-        await client.send_message(message.channel,embed=em)                                                
+        await client.send_message(message.channel,embed=em)
+                         
+@client.event
+async def on_message(message):
+    if message.content.startswith('Music'):
+        em=discord.Embed(tittle='music commands', description='hsummon, hplay, hpause, hresume, hskip, hvolume, hsearch, hshuffle, hdisconnect', colour=#4eeb9b)
+        em.set_image(url="https://raw.githubusercontent.com/AkinoKawaii/Hibiki/master/music.png")
+        await client.send_message(message.channel,embed=em)                          
 
 print('Starting....')
 client.run('MzMzMDgxMjEyMDY1Mjg0MDk2.DRs-OA.inWxGr07ZiJmOTVsAvMKiuYyRwU')
