@@ -1,6 +1,6 @@
 import discord
 import asyncio
-from hibi3
+import hibi3
 client = discord.Client()
 @client.event
 async def on_message(message):
