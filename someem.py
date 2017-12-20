@@ -7,5 +7,5 @@ client = discord.Client()
 async def on_message(message):
     if message.content.startswith('cmd'):
         em=discord.Embed(description='commands')
-        embed.set_image(url='https://raw.githubusercontent.com/AkinoKawaii/Hibiki/master/command.jpeg')
+        embed.set_author(name='test')
         await client.send_message(message.channel,embed=em)
