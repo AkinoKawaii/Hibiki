@@ -151,7 +151,7 @@ async def on_message(message):
         embed.add_field(name='hdisconnect', value='disconnect Hibiki from #VoiceChannel', inline=False)
         embed.set_footer(text='made by OnikaStudio')
         embed.set_image(url='https://raw.githubusercontent.com/AkinoKawaii/Hibiki/master/hibikiprofiile.png')
-        await client.send_message(embed=embed)            
+        await client.send_message(message.channel,embed=embed)            
 @client.event
 async def on_member_update(before, after):
         server = after.server
