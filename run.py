@@ -1,7 +1,5 @@
 import discord
 import asyncio
-import hibi3
-import someem
 import re
 import random
 import talking
