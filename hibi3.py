@@ -153,10 +153,7 @@ async def on_message(message):
         embed.set_footer(text='made by OnikaStudio')
         embed.set_image(url='https://raw.githubusercontent.com/AkinoKawaii/Hibiki/master/music.png')
         await client.send_message(message.channel,embed=embed)
-@client.event
-async def on_member_join(member):
-    server = member.server
-    await client.send_message(client.get_channel('388822871780229125'), member.server, '{0.name} http://bit.ly/2AogpWJ')
+        
 @client.event
 async def on_member_update(before, after):
         server = after.server
