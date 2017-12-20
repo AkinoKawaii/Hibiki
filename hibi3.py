@@ -150,7 +150,7 @@ async def on_member_update(before, after):
 @client.event
 async def on_message(message):
     if message.content.startswith('cmd'):
-        em=discord.Embed(description='user say Invite Music Hibiki')
+        em = discord.Embed(description='user say Invite Music Hibiki')
         em.set_image(url="https://raw.githubusercontent.com/AkinoKawaii/Hibiki/master/command.jpeg")
         await client.send_message(message.channel,embed=em)                        
                          
