@@ -1,5 +1,3 @@
-@client.event
-async def on_message(message):
     if message.content.startswith('cmd'):
         embed=discord.Embed(color=0x00ce5c)
         embed.set_author(name='Command List',icon_url='https://raw.githubusercontent.com/AkinoKawaii/Hibiki/master/hibiki-2.png')
