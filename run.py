@@ -23,7 +23,7 @@ async def on_ready():
     print(client.user.name)
     print(client.user.id)
     print('------')
-    await client.change_presence( game=discord.Game( name="cmd | myanimelist.net", type = 1))
+    await client.change_presence( game=discord.Game( name="cmd for help", type = 1))
     
 @client.event
 async def on_message(message):
@@ -130,6 +130,7 @@ async def on_message(message):
             embed.add_field(name='say', value='Repeat your words', inline=False)
             embed.add_field(name='Invite', value='Send Invite(bot) link', inline=False)
             embed.add_field(name='Hibiki', value='Talk with hibiki', inline=False)
+            embed.set_image(url='https://raw.githubusercontent.com/AkinoKawaii/Hibiki/master/music.png')            
             embed.add_field(name='hsummon', value='Hibiki will connected in your #VoiceChannel', inline=False)
             embed.add_field(name='hplay', value='Request music', inline=False)
             embed.add_field(name='hnp', value='Show playing music', inline=False)
@@ -142,7 +143,6 @@ async def on_message(message):
             embed.add_field(name='hsearch', value='searching the song #YouTube', inline=False)
             embed.add_field(name='hdisconnect', value='disconnect Hibiki from #VoiceChannel', inline=False)
             embed.set_footer(text='made by OnikaStudio')
-            embed.set_image(url='https://raw.githubusercontent.com/AkinoKawaii/Hibiki/master/music.png')
             await client.send_message(message.channel,embed=embed)
                   
     elif message.content.startswith('say'):
